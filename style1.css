@@ -1,156 +1,83 @@
-/* Reset & Base */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e6f0ff; /* 浅蓝背景 */
-  color: #1a1a1a; /* 深色字体 */
-}
-
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-header {
-  background: #004080; /* 深蓝 */
-  padding: 30px 20px;
-  text-align: center;
-  border-bottom: 1px solid #003060;
-}
-
-header h1 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 2.5rem;
-  color: #e6f0ff;
-}
-
-header p {
-  margin: 5px 0 0;
-  font-size: 1.2rem;
-  color: #b3c7ff;
-}
-
-nav {
-  background: #3366cc;
-  display: flex;
-  justify-content: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #2a55a0;
-}
-
-nav a {
-  color: #dbe9ff;
-  margin: 0 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-  font-size: 1rem;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
-main {
-  flex: 1;
-  max-width: 1000px;
-  margin: 30px auto 40px;
-  background: #ffffff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(51, 102, 204, 0.3);
-}
-
-h2 {
-  color: #004080;
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-weight: 700;
-  font-size: 1.8rem;
-}
-
-p {
-  line-height: 1.6;
-  font-size: 1.05rem;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
   color: #333;
 }
 
-a {
-  color: #004080;
-  text-decoration: none;
+header {
+  background-color: #004080;
+  color: white;
+  padding: 2rem;
+  text-align: center;
 }
 
-a:hover {
-  text-decoration: underline;
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-/* Carousel */
+main {
+  padding: 2rem;
+}
+
 .carousel-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.carousel-wrapper {
   position: relative;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 .carousel-track {
   display: flex;
-  gap: 15px;
   transition: transform 0.5s ease;
+  gap: 1rem;
 }
 
 .carousel-track img {
   width: 250px;
   height: 250px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(51, 102, 204, 0.4);
-  user-select: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
 }
 
 .carousel-btn {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
-  background: #3366cc;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
   border: none;
-  color: #dbe9ff;
   font-size: 2rem;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  padding: 0.5rem;
   cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-  user-select: none;
+  z-index: 10;
 }
 
-.carousel-btn:hover {
-  opacity: 1;
+.carousel-btn.left {
+  left: 0;
 }
 
-.carousel-btn.prev {
-  left: 10px;
+.carousel-btn.right {
+  right: 0;
 }
 
-.carousel-btn.next {
-  right: 10px;
+.contact {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 footer {
-  background: #004080;
-  color: #cce0ff;
+  background-color: #004080;
+  color: white;
   text-align: center;
-  padding: 18px 0;
-  font-size: 0.9rem;
-  border-top: 1px solid #003060;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
 }
