@@ -2,48 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Procureland - Product Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProcureLand | Premium Laundry Bags Supplier</title>
   <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
-  <header>
-    <h1>Procureland</h1>
-    <p>Exporting quality laundry bags and tiles worldwide</p>
-  </header>
+  <div class="page-container">
+    <header>
+      <h1>ProcureLand</h1>
+      <p>Your Trusted Partner in Premium Laundry Bags</p>
+    </header>
 
-  <main>
-    <section class="carousel-container">
-      <h2>Recommended Products</h2>
-      <div class="carousel-wrapper">
-        <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
-        <div class="carousel-track" id="carousel">
-          <!-- 图片请放在 images 文件夹中 -->
-          <img src="images/206A7330.JPG" alt="Product 1">
-          <img src="images/206A7331.JPG" alt="Product 2">
-          <img src="images/206A7334.JPG" alt="Product 3">
-          <img src="images/206A7339.JPG" alt="Product 4">
-          <img src="images/206A7341.JPG" alt="Product 5">
-          <img src="images/206A7342.JPG" alt="Product 6">
-          <img src="images/206A7346.JPG" alt="Product 7">
-          <img src="images/206A7351.JPG" alt="Product 8">
-          <img src="images/206A7354.JPG" alt="Product 9">
-          <img src="images/206A7355.JPG" alt="Product 10">
-          <img src="images/206A7366.JPG" alt="Product 11">
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>We are a leading laundry bags manufacturer with our own factory located in China, dedicated to quality and reliability.</p>
+      </section>
+
+      <section id="products">
+        <h2>Our Laundry Bags</h2>
+        <div class="carousel-container">
+          <button class="carousel-btn prev">&lt;</button>
+          <div class="carousel-track">
+            <img src="206A7330.JPG" alt="Laundry Bag 1" />
+            <img src="206A7331.JPG" alt="Laundry Bag 2" />
+            <img src="206A7334.JPG" alt="Laundry Bag 3" />
+            <img src="206A7339.JPG" alt="Laundry Bag 4" />
+            <img src="206A7341.JPG" alt="Laundry Bag 5" />
+            <img src="206A7342.JPG" alt="Laundry Bag 6" />
+            <!-- 更多图片可以继续加 -->
+          </div>
+          <button class="carousel-btn next">&gt;</button>
         </div>
-        <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
-      </div>
-    </section>
+      </section>
 
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p>Email: <strong>sales@procureland.com</strong></p>
-    </section>
-  </main>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:sales@procureland.com">sales@procureland.com</a></p>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Procureland. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 ProcureLand. All rights reserved.</p>
+    </footer>
+  </div>
 
   <script src="script1.js"></script>
 </body>
