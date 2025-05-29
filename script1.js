@@ -1,39 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".carousel-track");
-  const images = Array.from(track.children);
-  const prevBtn = document.querySelector(".carousel-btn.prev");
-  const nextBtn = document.querySelector(".carousel-btn.next");
+let scrollIndex = 0;
 
-  const imgWidth = images[0].getBoundingClientRect().width + 15; // 图片宽度 + 间距
+function scrollCarousel(direction) {
+  const track = document.getElementById('carousel');
+  const cardWidth = 270; // 图片宽度 + margin
+  scrollIndex += direction;
+  const maxIndex = Math.ceil(track.children.length - (window.innerWidth / cardWidth));
 
-  let currentIndex = 0;
+  if (scrollIndex < 0) scrollIndex = 0;
+  if (scrollIndex > maxIndex) scrollIndex = maxIndex;
 
-  function updatePosition() {
-    track.style.transform = `translateX(-${currentIndex * imgWidth}px)`;
-  }
+  track.style.transform = `translateX(${-scrollIndex * cardWidth}px)`;
+}
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = images.length - 3; // 显示最后3张图片时停住（假设可视区3张）
-    }
-    updatePosition();
-  });
-
-  nextBtn.addEventListener("click", () => {
-    currentIndex++;
-    if (currentIndex > images.length - 3) {
-      currentIndex = 0;
-    }
-    updatePosition();
-  });
-
-  // 自动轮播（每4秒切换）
-  setInterval(() => {
-    currentIndex++;
-    if (currentIndex > images.length - 3) {
-      currentIndex = 0;
-    }
-    updatePosition();
-  }, 4000);
-});
+// 自动轮播（可选）
+setInterval(() => {
+  scrollCarousel(1);
+}, 5000);
