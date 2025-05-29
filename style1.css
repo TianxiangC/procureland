@@ -1,10 +1,21 @@
-body {
+/* 基础重置与字体 */
+html, body {
+  height: 100%;
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: #f8f8f8;
   color: #333;
 }
 
+/* body用flex做垂直布局，撑满视口高度 */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* header样式 */
 header {
   background-color: #004080;
   color: white;
@@ -17,10 +28,13 @@ h1 {
   font-size: 2.5rem;
 }
 
+/* main撑满剩余空间 */
 main {
+  flex: 1;
   padding: 2rem;
 }
 
+/* 推荐产品轮播容器 */
 .carousel-container {
   max-width: 1000px;
   margin: auto;
@@ -48,6 +62,7 @@ main {
   flex-shrink: 0;
 }
 
+/* 左右按钮 */
 .carousel-btn {
   position: absolute;
   top: 40%;
@@ -69,15 +84,17 @@ main {
   right: 0;
 }
 
+/* 联系我们部分 */
 .contact {
   text-align: center;
   margin-top: 3rem;
 }
 
+/* 页脚黏底且样式 */
 footer {
   background-color: #004080;
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 0;
 }
