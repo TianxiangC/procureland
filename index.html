@@ -3,48 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Procureland</title>
+  <title>Procureland - Product Showcase</title>
   <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
   <header>
     <h1>Procureland</h1>
-    <p>Your trusted supplier of laundry bags and ceramic tiles</p>
+    <p>Exporting quality laundry bags and tiles worldwide</p>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>Welcome to Procureland</h2>
-      <p>We specialize in exporting laundry bags and ceramic tiles worldwide.</p>
-    </section>
-
-    <section class="carousel-section">
-      <h2>Our Products</h2>
-      <div class="carousel">
-        <div class="carousel-track">
-          <!-- 图片列表开始 -->
-          <img src="images/206A7330.JPG" alt="Product 1" />
-          <img src="images/206A7331.JPG" alt="Product 2" />
-          <img src="images/206A7334.JPG" alt="Product 3" />
-          <img src="images/206A7339.JPG" alt="Product 4" />
-          <img src="images/206A7341.JPG" alt="Product 5" />
-          <img src="images/206A7342.JPG" alt="Product 6" />
-          <img src="images/206A7346.JPG" alt="Product 7" />
-          <img src="images/206A7351.JPG" alt="Product 8" />
-          <img src="images/206A7354.JPG" alt="Product 9" />
-          <img src="images/206A7355.JPG" alt="Product 10" />
-          <img src="images/206A7366.JPG" alt="Product 11" />
-          <!-- 图片复制一份实现无缝滚动 -->
-          <img src="images/206A7330.JPG" alt="Product 1" />
-          <img src="images/206A7331.JPG" alt="Product 2" />
-          <img src="images/206A7334.JPG" alt="Product 3" />
+    <section class="carousel-container">
+      <h2>Recommended Products</h2>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
+        <div class="carousel-track" id="carousel">
+          <!-- 图片请放在 images 文件夹中 -->
+          <img src="images/206A7330.JPG" alt="Product 1">
+          <img src="images/206A7331.JPG" alt="Product 2">
+          <img src="images/206A7334.JPG" alt="Product 3">
+          <img src="images/206A7339.JPG" alt="Product 4">
+          <img src="images/206A7341.JPG" alt="Product 5">
+          <img src="images/206A7342.JPG" alt="Product 6">
+          <img src="images/206A7346.JPG" alt="Product 7">
+          <img src="images/206A7351.JPG" alt="Product 8">
+          <img src="images/206A7354.JPG" alt="Product 9">
+          <img src="images/206A7355.JPG" alt="Product 10">
+          <img src="images/206A7366.JPG" alt="Product 11">
         </div>
+        <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
       </div>
     </section>
 
     <section class="contact">
       <h2>Contact Us</h2>
-      <p>Email us at: <strong>sales@procureland.com</strong></p>
+      <p>Email: <strong>sales@procureland.com</strong></p>
     </section>
   </main>
 
