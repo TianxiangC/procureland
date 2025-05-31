@@ -12,7 +12,7 @@ carousels.forEach(id => {
 function getCardWidth(id) {
   const track = document.getElementById(id);
   if (!track || track.children.length === 0) return 270; // 默认值
-  
+
   const firstCard = track.children[0];
   const style = window.getComputedStyle(firstCard);
   const width = firstCard.offsetWidth;
@@ -24,7 +24,7 @@ function getCardWidth(id) {
 function scrollCarousel(id, direction) {
   const track = document.getElementById(id);
   if (!track) return;
-  
+
   const cardWidth = getCardWidth(id);
   const visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
   const maxIndex = Math.max(track.children.length - visibleCards, 0);
@@ -36,9 +36,9 @@ function scrollCarousel(id, direction) {
   track.style.transform = `translateX(${-scrollIndexes[id] * cardWidth}px)`;
 }
 
-// 如果你有自动轮播，改成只对第一页（例如carousel1）自动轮播
-let autoScrollIndex = 0;
-setInterval(() => {
-  const id = carousels[0]; // 只自动滚动第一个轮播
-  scrollCarousel(id, 1);
-}, 5000);
+// 自动轮播已禁用
+// let autoScrollIndex = 0;
+// setInterval(() => {
+//   const id = carousels[0]; // 只自动滚动第一个轮播
+//   scrollCarousel(id, 1);
+// }, 5000);
