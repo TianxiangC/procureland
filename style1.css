@@ -1,100 +1,100 @@
 /* 基础重置与字体 */
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #f8f8f8;
-  color: #333;
-}
-
-/* body用flex做垂直布局，撑满视口高度 */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* header样式 */
-header {
-  background-color: #004080;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-/* main撑满剩余空间 */
-main {
-  flex: 1;
-  padding: 2rem;
-}
-
-/* 推荐产品轮播容器 */
-.carousel-container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-}
-
-.carousel-wrapper {
-  position: relative;
-  overflow: hidden;
-  margin-top: 1rem;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  gap: 1rem;
-}
-
-.carousel-track img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  flex-shrink: 0;
-}
-
-/* 左右按钮 */
-.carousel-btn {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.carousel-btn.left {
-  left: 0;
-}
-
-.carousel-btn.right {
-  right: 0;
-}
-
-/* 联系我们部分 */
-.contact {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-/* 页脚黏底且样式 */
-footer {
-  background-color: #004080;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 0;
-}
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #333;
+  }
+  
+  /* body用flex做垂直布局，撑满视口高度 */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* header样式 */
+  header {
+    background-color: #004080;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  /* main撑满剩余空间 */
+  main {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  /* 推荐产品轮播容器 */
+  .carousel-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1rem;
+  }
+  
+  .carousel-track img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+  
+  /* 左右按钮 */
+  .carousel-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-btn.left {
+    left: 0;
+  }
+  
+  .carousel-btn.right {
+    right: 0;
+  }
+  
+  /* 联系我们部分 */
+  .contact {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  /* 页脚黏底且样式 */
+  footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 0;
+  }
