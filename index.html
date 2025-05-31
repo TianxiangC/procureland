@@ -3,38 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Procureland - Product Showcase</title>
+  <title>Procureland - Laundry Bags & Tiles</title>
   <link rel="stylesheet" href="style1.css" />
+  <style>
+    /* 简单Lightbox样式 */
+    #lightboxOverlay {
+      position: fixed;
+      top:0; left:0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    #lightboxOverlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Procureland</h1>
-    <p>Exporting quality laundry bags worldwide</p>
+    <p>Specializing in Laundry Bags & High-Quality Ceramic Tiles</p>
   </header>
 
   <main>
-    <section class="carousel-container">
-      <h2>Recommended B2B Products</h2>
+    <!-- Laundry Bags -->
+    <section class="carousel-container" aria-label="Laundry Bags Products">
+      <h2>Laundry Bags</h2>
+      <p>Discover our durable and high-quality laundry bags, designed for efficient storage and transport. Our laundry bags feature premium materials and expert craftsmanship to ensure long-lasting use for your business needs.</p>
       <div class="carousel-wrapper">
-        <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
-        <div class="carousel-track" id="carousel">
-          <!-- 图片请放在 images 文件夹中 -->
-          <img src="images/206A7330.JPG" alt="Product 1">
-          <img src="images/206A7331.JPG" alt="Product 2">
-          <img src="images/206A7334.JPG" alt="Product 3">
-          <img src="images/206A7339.JPG" alt="Product 4">
-          <img src="images/206A7341.JPG" alt="Product 5">
-          <img src="images/206A7342.JPG" alt="Product 6">
-          <img src="images/206A7346.JPG" alt="Product 7">
-          <img src="images/206A7351.JPG" alt="Product 8">
-          <img src="images/206A7354.JPG" alt="Product 9">
-          <img src="images/206A7355.JPG" alt="Product 10">
-          <img src="images/206A7366.JPG" alt="Product 11">
+        <button class="carousel-btn left" onclick="scrollCarousel('carousel1', -1)" aria-label="Scroll left laundry bags">&#10094;</button>
+        <div class="carousel-track" id="carousel1">
+          <img src="images/206A7330.JPG" alt="Laundry Bag 1" onclick="openLightbox(this)">
+          <img src="images/206A7331.JPG" alt="Laundry Bag 2" onclick="openLightbox(this)">
+          <img src="images/206A7334.JPG" alt="Laundry Bag 3" onclick="openLightbox(this)">
+          <img src="images/206A7339.JPG" alt="Laundry Bag 4" onclick="openLightbox(this)">
+          <img src="images/206A7341.JPG" alt="Laundry Bag 5" onclick="openLightbox(this)">
+          <img src="images/206A7342.JPG" alt="Laundry Bag 6" onclick="openLightbox(this)">
+          <img src="images/206A7346.JPG" alt="Laundry Bag 7" onclick="openLightbox(this)">
+          <img src="images/206A7351.JPG" alt="Laundry Bag 8" onclick="openLightbox(this)">
+          <img src="images/206A7354.JPG" alt="Laundry Bag 9" onclick="openLightbox(this)">
+          <img src="images/206A7355.JPG" alt="Laundry Bag 10" onclick="openLightbox(this)">
+          <img src="images/206A7366.JPG" alt="Laundry Bag 11" onclick="openLightbox(this)">
         </div>
-        <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
+        <button class="carousel-btn right" onclick="scrollCarousel('carousel1', 1)" aria-label="Scroll right laundry bags">&#10095;</button>
       </div>
     </section>
 
+    <!-- 60SY606 Series Tiles -->
+    <section class="carousel-container" aria-label="60SY606 Tile Series">
+      <h2>60SY606 Tile Series</h2>
+      <p>Our 60SY606 ceramic tile series offers exquisite design, durability, and a wide range of indoor applications. Perfect for commercial and residential projects requiring high-quality tiles.</p>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollCarousel('carousel2', -1)" aria-label="Scroll left 60SY606 tiles">&#10094;</button>
+        <div class="carousel-track" id="carousel2">
+          <img src="images/60SY606-1.jpg" alt="60SY606 Tile 1" onclick="openLightbox(this)">
+          <img src="images/60SY606-2.jpg" alt="60SY606 Tile 2" onclick="openLightbox(this)">
+          <img src="images/60SY606-3.jpg" alt="60SY606 Tile 3" onclick="openLightbox(this)">
+          <img src="images/60SY606-15.jpg" alt="60SY606 Tile 4" onclick="openLightbox(this)">
+          <img src="images/60SY606-16.jpg" alt="60SY606 Tile 5" onclick="openLightbox(this)">
+          <img src="images/60SY606-室内场景.jpg" alt="60SY606 Indoor Scene" onclick="openLightbox(this)">
+        </div>
+        <button class="carousel-btn right" onclick="scrollCarousel('carousel2', 1)" aria-label="Scroll right 60SY606 tiles">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- KM6623 Tile Series -->
+    <section class="carousel-container" aria-label="KM6623 Tile Series">
+      <h2>KM6623 Tile Series</h2>
+      <p>KM6623 tile series features elegant textures and versatile designs, ideal for modern interiors. These tiles combine aesthetics with strength for lasting beauty.</p>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollCarousel('carousel3', -1)" aria-label="Scroll left KM6623 tiles">&#10094;</button>
+        <div class="carousel-track" id="carousel3">
+          <img src="images/KM6623-8.jpg" alt="KM6623 Tile 1" onclick="openLightbox(this)">
+          <img src="images/KM6623-10.jpg" alt="KM6623 Tile 2" onclick="openLightbox(this)">
+          <img src="images/KM6623-11.jpg" alt="KM6623 Tile 3" onclick="openLightbox(this)">
+          <img src="images/KM6623-单图.jpg" alt="KM6623 Tile 4" onclick="openLightbox(this)">
+          <img src="images/KM6623-场景.jpg" alt="KM6623 Tile Scene" onclick="openLightbox(this)">
+          <img src="images/KM2623-场景2.jpg" alt="KM6623 Tile Scene 2" onclick="openLightbox(this)">
+        </div>
+        <button class="carousel-btn right" onclick="scrollCarousel('carousel3', 1)" aria-label="Scroll right KM6623 tiles">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- NP60011 Tile Series -->
+    <section class="carousel-container" aria-label="NP60011 Tile Series">
+      <h2>NP60011 Tile Series</h2>
+      <p>NP60011 series presents premium tiles with unique patterns and superior finish, perfect for stylish and durable surface solutions.</p>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" onclick="scrollCarousel('carousel4', -1)" aria-label="Scroll left NP60011 tiles">&#10094;</button>
+        <div class="carousel-track" id="carousel4">
+          <img src="images/NP60011.jpg" alt="NP60011 Tile 1" onclick="openLightbox(this)">
+          <img src="images/NP60011场景图.jpg" alt="NP60011 Tile Scene 1" onclick="openLightbox(this)">
+          <img src="images/NP60011场景图-2.jpg" alt="NP60011 Tile Scene 2" onclick="openLightbox(this)">
+          <img src="images/NP60011场景图-3.jpg" alt="NP60011 Tile Scene 3" onclick="openLightbox(this)">
+        </div>
+        <button class="carousel-btn right" onclick="scrollCarousel('carousel4', 1)" aria-label="Scroll right NP60011 tiles">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section class="contact">
       <h2>Contact Us</h2>
       <p>Email: <strong>sales@procureland.com</strong></p>
@@ -45,21 +118,46 @@
     <p>&copy; 2025 Procureland. All rights reserved. Based in Dongguan, China.</p>
   </footer>
 
-  <script src="script1.js"></script>
+  <!-- Lightbox overlay -->
+  <div id="lightboxOverlay" onclick="closeLightbox()">
+    <img src="" alt="Expanded product image" id="lightboxImage" />
+  </div>
 
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68385afd572be3190b6e56a6/1ise26s7i';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
+  <script>
+    function scrollCarousel(id, direction) {
+      const track = document.getElementById(id);
+      const cardWidth = 270;
+      if (!track.scrollIndex) track.scrollIndex = 0;
+
+      const maxIndex = Math.ceil(track.children.length - (window.innerWidth / cardWidth));
+      track.scrollIndex += direction;
+      if (track.scrollIndex < 0) track.scrollIndex = 0;
+      if (track.scrollIndex > maxIndex) track.scrollIndex = maxIndex;
+      track.style.transform = `translateX(${-track.scrollIndex * cardWidth}px)`;
+    }
+
+    // 自动滚动所有轮播
+    setInterval(() => {
+      ['carousel1','carousel2','carousel3','carousel4'].forEach(id => {
+        scrollCarousel(id, 1);
+      });
+    }, 5000);
+
+    // Lightbox 打开
+    function openLightbox(img) {
+      const overlay = document.getElementById('lightboxOverlay');
+      const lightboxImg = document.getElementById('lightboxImage');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      overlay.style.display = 'flex';
+    }
+
+    // Lightbox 关闭
+    function closeLightbox() {
+      document.getElementById('lightboxOverlay').style.display = 'none';
+      document.getElementById('lightboxImage').src = '';
+      document.getElementById('lightboxImage').alt = '';
+    }
   </script>
-  <!--End of Tawk.to Script-->
-
 </body>
 </html>
