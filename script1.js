@@ -1,7 +1,5 @@
-// 控制多个轮播滚动状态
 const carousels = ['carousel1', 'carousel2', 'carousel3', 'carousel4'];
 
-// 初始化每个轮播的scrollIndex
 const scrollIndexes = {
   carousel1: 0,
   carousel2: 0,
@@ -21,16 +19,13 @@ function scrollCarousel(id, direction) {
   track.style.transform = `translateX(${-scrollIndexes[id] * cardWidth}px)`;
 }
 
-// 自动轮播，5秒切换一次，每个轮播区轮流移动
-let autoScrollIndex = 0;
+// 只对第一页的carousel1自动滚动
 setInterval(() => {
-  const id = carousels[autoScrollIndex % carousels.length];
-  scrollCarousel(id, 1);
-  autoScrollIndex++;
+  scrollCarousel('carousel1', 1);
 }, 5000);
 
 
-// Lightbox放大相关
+// Lightbox放大相关，保持不变
 function openLightbox(img) {
   let overlay = document.getElementById('lightboxOverlay');
   if (!overlay) {
